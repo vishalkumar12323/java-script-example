@@ -1,9 +1,11 @@
 import type { Metadata } from "next";
+import { ThemeProvider } from "@/components/theme-provider";
 import "./globals.css";
 
 export const metadata: Metadata = {
   title: "java-script-example",
-  description: "provide java-script basic example for javascript lerners",
+  description:
+    "provides java-script all data-types, functions, and methods basic examples for java-script language learners",
 };
 
 export default function RootLayout({
@@ -13,7 +15,15 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" suppressHydrationWarning>
-      <body>{children}</body>
+      <body suppressHydrationWarning>
+        <ThemeProvider
+          attribute="class"
+          defaultTheme="system"
+          enableSystem
+          disableTransitionOnChange>
+          {children}
+        </ThemeProvider>
+      </body>
     </html>
   );
 }
