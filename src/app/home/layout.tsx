@@ -8,7 +8,7 @@ export default function Layout({ children }: { children: React.ReactNode }) {
       <SideBarTrigger>
         <SideBar />
         <Navbar />
-        <div className="content col-span-1 flex justify-center items-center">
+        <div className="col-span-1 p-2 content overflow-y-auto [&::-webkit-scrollbar]:w-2">
           {children}
         </div>
       </SideBarTrigger>

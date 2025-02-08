@@ -8,7 +8,7 @@ export const SideBarTrigger = ({ children }: { children: React.ReactNode }) => {
   return (
     <>
       <div
-        className={`grid min-h-screen grid-rows2 ${
+        className={`grid  grid-rows2 ${
           isOpened ? "collapsed" : "grid-cols2"
         } side-bar-transition`}>
         {children}
