@@ -86,3 +86,19 @@ body {
     @apply bg-background text-foreground;
   }
 }
+
+@layer utilities {
+  .grid-cols2 {
+    grid-template-columns: 200px auto;
+  }
+  .grid-rows2 {
+    grid-template-rows: 50px auto;
+  }
+
+  .side-bar-transition {
+    transition: grid-template-columns 0.3s ease-in-out;
+  }
+  .collapsed {
+    grid-template-columns: 0 auto;
+  }
+}
