@@ -103,7 +103,7 @@ body {
   }
 
   .side-bar-transition {
-    transition: grid-template-columns 0.3s ease-in-out;
+    transition: all 0.3s ease-in-out;
   }
   .collapsed {
     grid-template-columns: 0 auto;

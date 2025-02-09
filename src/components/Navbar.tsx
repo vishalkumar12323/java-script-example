@@ -5,7 +5,7 @@ import { Button } from "./ui/button";
 
 const Navbar = () => {
   return (
-    <div className="sticky top-0 z-40 navbar row-span-1 flex justify-between px-3 items-center border-b shadow-md">
+    <div className="sticky top-0 z-40 navbar row-span-1 flex justify-between px-3 items-center border-b shadow">
       <>
         <TriggerButton />
       </>
