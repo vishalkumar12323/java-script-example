@@ -1,8 +1,7 @@
-import { type NextRequest, NextResponse } from "next/server";
 import fs from "node:fs";
 import path from "node:path";
 import { v4 as uuidv4 } from "uuid";
-export async function GET(req: NextRequest) {
+export async function GET() {
   const DIRECTORY_PATH = path.resolve("src/javascript");
   try {
     const folders = fs

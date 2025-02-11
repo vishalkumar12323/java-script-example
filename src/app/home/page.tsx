@@ -1,7 +1,7 @@
 import React from "react";
 
-const DashboardPagef = async () => {
+const DashboardPage = async () => {
   return <section>DashboardPagef</section>;
 };
 
-export default DashboardPagef;
+export default DashboardPage;

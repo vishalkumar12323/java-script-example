@@ -3,6 +3,7 @@ import React from "react";
 import { useState } from "react";
 import { ChevronRight } from "lucide-react";
 import { Button } from "./ui/button";
+import Link from "next/link";
 
 type TListCollapsable = {
   [key: string]: boolean;
@@ -52,8 +53,11 @@ export const SidebarMenuList = ({
         {listItems.files.map((sub) => (
           <li
             key={sub.id}
-            className="font-normal text-[14px] hover:bg-accent hover:text-accent-foreground py-2 px-4 rounded-md select-none">
-            {sub.filename}
+            className="font-normal text-[14px] hover:bg-accent hover:text-accent-foreground py-2 px-4 rounded-md select-none cursor-pointer">
+            <Link
+              href={`/home/content/${listItems.item.toLowerCase()}/${sub.filename.toLowerCase()}`}>
+              {sub.filename.split(".")[0]}
+            </Link>
           </li>
         ))}
       </ul>

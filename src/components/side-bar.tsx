@@ -2,23 +2,6 @@
 import { useSideBarTrigger } from "@/context/side-bar-trigger";
 import { SidebarMenuList } from "./sidebar-menu-list";
 
-const data = [
-  {
-    id: "1",
-    item: "array",
-    subItem: ["app.js", "index.js"],
-  },
-  {
-    id: "2",
-    item: "object",
-    subItem: ["object.js", "class.js"],
-  },
-  {
-    id: "3",
-    item: "math",
-    subItem: ["abc.js", "sqrt.js", "pow.js"],
-  },
-];
 
 type TFileType = {
   id: string;
@@ -30,7 +13,6 @@ type TApiResponseType = {
   files: TFileType[];
 }[];
 export const SideBar = ({ folders }: { folders: TApiResponseType }) => {
-  // console.log(folders);
   const { isOpened } = useSideBarTrigger();
   return (
     <aside
